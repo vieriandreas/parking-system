@@ -1,11 +1,11 @@
-const { users } = require('../../models')
+const { User } = require('../../models')
 
 class AuthRepository {
     constructor() { }
 
     async login({ email, password }) {
         try {
-            const logAcc = await users.findAll({
+            const logAcc = await User.findAll({
                 where: {
                     email: email,
                     password: password
@@ -32,7 +32,7 @@ class AuthRepository {
 
     async register({ email, password}) {
         try {
-            const createdUser = await users.create({ email, password})
+            const createdUser = await User.create({ email, password})
             console.log(createdUser)
             return {
                 statusCode: 201,

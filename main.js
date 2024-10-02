@@ -4,13 +4,13 @@ const port = 3000;
 
 //import repo
 const UserRepository = require('./src/repository/user');
-
+const AuthRepository = require('./src/repository/auth');
 //import service
 const UserService = require('./src/service/user');
-
+const AuthService = require('./src/service/auth');
 //import handler
 const UserHandler = require('./src/handler/user');
-const UserRepository = require('./src/repository/user');
+const AuthHandler = require('./src/handler/auth');
 
 app.use(express.json());
 
